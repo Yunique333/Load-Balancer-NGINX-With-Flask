@@ -5,7 +5,7 @@ from datetime import datetime as dtm
 
 app1 = Flask(__name__)
 
-connection_url = 'mongodb://cobadatabase:proyek123@cluster0-shard-00-00.sxr4g.gcp.mongodb.net:27017,cluster0-shard-00-01.sxr4g.gcp.mongodb.net:27017,cluster0-shard-00-02.sxr4g.gcp.mongodb.net:27017/Example?ssl=true&replicaSet=atlas-u07olz-shard-0&authSource=admin&retryWrites=true&w=majority'
+connection_url = 'mongodb://cobadatabase:<DatabasePassword>@cluster0-shard-00-00.sxr4g.gcp.mongodb.net:27017,cluster0-shard-00-01.sxr4g.gcp.mongodb.net:27017,cluster0-shard-00-02.sxr4g.gcp.mongodb.net:27017/Example?ssl=true&replicaSet=atlas-u07olz-shard-0&authSource=admin&retryWrites=true&w=majority'
 client = pymongo.MongoClient(connection_url)
 
 database = client.get_database('Example')
